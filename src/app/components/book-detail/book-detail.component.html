@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <!-- Menampilkan Cover Buku dan Detail -->
+  <div class="book-container">
+    <div class="book-cover-container">
+      <img [src]="book?.coverImageUrl" alt="Cover Buku" class="book-cover img-fluid" />
+    </div>
+
+    <div class="book-details">
+      <h2 class="book-title">{{ book?.judul }}</h2>
+      <p class="book-author">oleh <span>{{ book?.penulis }}</span></p>
+
+      <div class="book-info">
+        <p><strong>Deskripsi:</strong></p>
+        <p>{{ book?.deskripsi }}</p>
+
+        <div class="book-meta">
+          <p><strong>Penerbit:</strong> {{ book?.penerbit }}</p>
+          <p><strong>Tahun Terbit:</strong> {{ book?.tahun_terbit }}</p>
+          <p><strong>Kategori:</strong> {{ book?.kategori }}</p>
+        </div>
+      </div>
+
+      <!-- Tombol Batal dan Pinjam -->
+      <div class="text-center mt-4">
+        <button class="btn btn-primary mr-3 d-inline-block" (click)="cancel()">Kembali</button>
+        <button class="btn btn-gray d-inline-block"(click)="goToPinjam()">Pinjam Buku</button>
+      </div>
+    </div>
+  </div>
+</div>

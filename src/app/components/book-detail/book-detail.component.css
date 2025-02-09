@@ -1,0 +1,174 @@
+/* Gaya umum untuk cover dan detail buku */
+.book-cover-container {
+  flex: 1;
+  max-width: 200px;
+  margin-left: 190px;
+  margin-top: 20px;
+}
+
+.book-cover {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.book-details {
+  flex: 2;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.book-author {
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.book-author span {
+  font-style: italic;
+  color: #444;
+}
+
+.book-info p {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.book-info strong {
+  color: #333;
+}
+
+.book-meta {
+  margin-top: 20px;
+}
+
+/* Styling untuk tombol batal dengan warna lebih kalem */
+.btn-primary {
+  background-color:  #2e59d9; /* Biru pucat pastel */
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn-primary:hover {
+  background-color: #4e73df; /* Biru sedikit lebih gelap saat hover */
+  transform: translateY(-3px);
+}
+
+.btn-primary:focus {
+  outline: none;
+}
+
+/* Alternatif warna abu-abu pastel */
+.btn-gray {
+  background-color: #5a6268; /* Abu-abu muda pastel */
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+.btn-gray:hover {
+  background-color: #6c757d; /* Abu-abu sedikit lebih gelap saat hover */
+  transform: translateY(-3px);
+}
+
+/* Layout Buku: Gambar dan Detailnya */
+.book-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsif untuk layar besar (desktop) */
+@media (min-width: 992px) {
+  .book-container {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .book-cover-container {
+    max-width: 200px;
+  }
+
+  .book-details {
+    flex: 2;
+  }
+}
+
+/* Responsif untuk layar sedang (tablet) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .book-cover-container {
+    max-width: 180px;
+  }
+
+  .book-title {
+    font-size: 1.8rem;
+  }
+
+  .book-author {
+    font-size: 1.2rem;
+  }
+
+  .book-info p {
+    font-size: 1rem;
+  }
+}
+
+/* Responsif untuk layar kecil (ponsel) */
+@media (max-width: 767px) {
+  .book-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .book-cover-container {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .book-details {
+    padding: 20px;
+  }
+
+  .book-title {
+    font-size: 1.6rem;
+  }
+
+  .book-author {
+    font-size: 1.1rem;
+  }
+
+  .book-info p {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

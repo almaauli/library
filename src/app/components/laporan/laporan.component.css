@@ -1,0 +1,104 @@
+/* Container utama */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: #f4f7fc; /* Warna latar belakang lembut */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 260px;
+  margin-top: 20px;
+}
+
+/* Heading utama */
+h2 {
+  font-size: 2rem;
+  color: #4a4a4a; /* Warna abu-abu gelap untuk teks utama */
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Heading sub (Laporan Hari Ini & Bulan Ini) */
+h3 {
+  font-size: 1.5rem;
+  color: #6c757d; /* Warna abu-abu medium untuk subjudul */
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Style untuk card (container laporan) */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+/* List item pada laporan */
+.list-group {
+  padding: 0;
+  list-style: none;
+}
+
+/* Tampilan item list */
+.list-group-item {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0; /* Warna border lebih lembut */
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+/* Efek hover pada list item */
+.list-group-item:hover {
+  background-color: #f1f1f1; /* Warna latar belakang saat hover */
+}
+
+/* Teks dalam list item */
+.list-group-item p {
+  margin: 5px 0;
+  color: #6c757d; /* Warna teks lembut */
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Style untuk tanggal */
+.list-group-item p span {
+  font-style: italic;
+  color: #999999; /* Warna teks tanggal lebih terang */
+}
+
+/* Teks jika tidak ada data */
+.no-data {
+  color: #999999; /* Warna teks lembut untuk pesan kosong */
+  font-style: italic;
+  text-align: center;
+}
+
+/* Responsif: menyesuaikan tampilan untuk layar kecil */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    margin-left: 0; /* Menghapus margin jika pada layar kecil */
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .list-group-item {
+    padding: 12px;
+  }
+}

@@ -1,0 +1,34 @@
+<div class="content">
+    <h2>Update Buku</h2>
+    <div *ngIf="book">
+      <form (ngSubmit)="updateBook()">
+        <label for="judul">Judul:</label>
+        <input [(ngModel)]="book.judul" type="text" id="judul" name="judul" required>
+        
+        <label for="penulis">Penulis:</label>
+        <input [(ngModel)]="book.penulis" type="text" id="penulis" name="penulis" required>
+        
+        <label for="penerbit">Penerbit:</label>
+        <input [(ngModel)]="book.penerbit" type="text" id="penerbit" name="penerbit" required>
+        
+        <label for="tahun_terbit">Tahun Terbit:</label>
+        <input [(ngModel)]="book.tahun_terbit" type="text" id="tahun_terbit" name="tahun_terbit" required>
+        
+        <label for="kategori">Kategori:</label>
+        <input [(ngModel)]="book.kategori" type="text" id="kategori" name="kategori" required>
+        
+        <label for="stok">Stok:</label>
+        <input [(ngModel)]="newStock" type="number" id="stok" name="stok" required>
+        
+        <label for="coverImageUrl">Cover Image URL:</label>
+        <input [(ngModel)]="book.coverImageUrl" type="text" id="coverImageUrl" name="coverImageUrl">
+        
+        <label for="deskripsi">Deskripsi:</label>
+        <textarea [(ngModel)]="book.deskripsi" id="deskripsi" name="deskripsi"></textarea>
+        
+        <button type="submit" class="btn btn-soft btn-lg btn-block m-3">Simpan</button> <br>
+        <button class="btn btn-cancel m-3" (click)="cancel()">Kembali</button>
+      </form>
+    </div>
+  </div>
+  

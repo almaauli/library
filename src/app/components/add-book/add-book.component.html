@@ -1,0 +1,69 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-10 col-sm-12">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h2 class="text-center text-muted mb-4">Tambah Buku</h2>
+
+          <div *ngIf="message" class="alert alert-info mt-3">
+            {{ message }}
+          </div>
+
+          <form (ngSubmit)="onAddBook()">
+            <!-- Input untuk Judul Buku -->
+            <div class="form-group mb-4">
+              <label for="judul" class="font-weight-bold">Judul Buku</label>
+              <input type="text" class="form-control form-control-lg" id="judul" [(ngModel)]="judul" name="judul" required placeholder="Masukkan judul buku">
+            </div>
+
+            <!-- Input untuk Pengarang -->
+            <div class="form-group mb-4">
+              <label for="penulis" class="font-weight-bold">Pengarang</label>
+              <input type="text" class="form-control form-control-lg" id="penulis" [(ngModel)]="penulis" name="penulis" required placeholder="Masukkan nama pengarang">
+            </div>
+
+            <!-- Input untuk Penerbit -->
+            <div class="form-group mb-4">
+              <label for="penerbit" class="font-weight-bold">Penerbit</label>
+              <input type="text" class="form-control form-control-lg" id="penerbit" [(ngModel)]="penerbit" name="penerbit" required placeholder="Masukkan nama penerbit">
+            </div>
+
+            <!-- Input untuk Tahun Terbit -->
+            <div class="form-group mb-4">
+              <label for="tahun_terbit" class="font-weight-bold">Tahun Terbit</label>
+              <input type="number" class="form-control form-control-lg" id="tahun_terbit" [(ngModel)]="tahun_terbit" name="tahun_terbit" required placeholder="Masukkan tahun terbit">
+            </div>
+
+            <!-- Input untuk Kategori -->
+            <div class="form-group mb-4">
+              <label for="kategori" class="font-weight-bold">Kategori</label>
+              <input type="text" class="form-control form-control-lg" id="kategori" [(ngModel)]="kategori" name="kategori" required placeholder="Masukkan kategori buku">
+            </div>
+
+            <!-- Input untuk Stok -->
+            <div class="form-group mb-4">
+              <label for="stok" class="font-weight-bold">Stok</label>
+              <input type="number" class="form-control form-control-lg" id="stok" [(ngModel)]="stok" name="stok" required placeholder="Masukkan jumlah stok">
+            </div>
+
+            <!-- Input untuk URL Cover Image -->
+            <div class="form-group mb-4">
+              <label for="coverImageUrl" class="font-weight-bold">Cover Image URL</label>
+              <input type="text" class="form-control form-control-lg" id="coverImageUrl" [(ngModel)]="coverImageUrl" name="coverImageUrl" required placeholder="Masukkan URL cover image">
+            </div>
+
+            <!-- Input untuk Deskripsi Buku -->
+            <div class="form-group mb-4">
+              <label for="deskripsi" class="font-weight-bold">Deskripsi</label>
+              <textarea class="form-control form-control-lg" id="deskripsi" [(ngModel)]="deskripsi" name="deskripsi" rows="4" required placeholder="Deskripsikan buku ini"></textarea>
+            </div>
+
+            <!-- Tombol untuk Menambahkan Buku -->
+            <button type="submit" class="btn btn-soft btn-lg btn-block">Tambah Buku</button>
+            <button class="btn btn-cancel mr-3 d-inline-block" (click)="cancel()">Kembali</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

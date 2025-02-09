@@ -1,0 +1,126 @@
+/* Container untuk daftar buku */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Heading */
+h2 {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+/* List styling */
+.list-group-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.list-group-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: #f9f9f9;
+}
+
+/* Gambar buku */
+.book-cover {
+  width: 80px;
+  height: 120px;
+  border-radius: 8px;
+  margin-right: 20px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Informasi buku */
+.book-info {
+  flex-grow: 1;
+  padding-right: 20px;
+}
+
+.book-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.book-author {
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Button styling */
+.btn-info {
+  background-color: #4e73df; /* Biru kalem */
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-size: 14px;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-info:hover {
+  background-color: #2e59d9; /* Biru sedikit lebih gelap saat hover */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    margin-left: 0;
+  }
+
+  .book-cover {
+    width: 60px;
+    height: 90px;
+  }
+
+  .book-info {
+    padding-right: 10px;
+  }
+
+  .book-title {
+    font-size: 18px;
+  }
+
+  .book-author {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .book-cover {
+    width: 50px;
+    height: 75px;
+  }
+
+  .book-title {
+    font-size: 16px;
+  }
+
+  .book-author {
+    font-size: 12px;
+  }
+}

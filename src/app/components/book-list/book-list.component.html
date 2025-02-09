@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <h2 class="text-center">Daftar Buku</h2>
+  <ul class="list-group">
+    <li class="list-group-item d-flex align-items-center" *ngFor="let book of books">
+      <img [src]="book.coverImageUrl" alt="Cover Buku" class="book-cover">
+      <div class="book-info">
+        <p class="book-title">{{ book?.judul }}</p>
+        <p class="book-author">{{ book?.penulis }}</p>
+      </div>
+      <button class="btn btn-info btn-sm" (click)="goToBookDetail(book.bookId)">Detail</button>
+    </li>
+  </ul>
+</div>

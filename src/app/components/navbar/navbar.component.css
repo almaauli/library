@@ -1,0 +1,114 @@
+/* Styling untuk Sidebar */
+.sidebar {
+  width: 250px; /* Lebar sidebar */
+  height: 100vh; /* Tinggi penuh layar */
+  background-color: #34495e; /* Warna latar belakang sidebar sedikit lebih gelap (abu-abu kebiruan) */
+  color: #34495e; /* Warna teks lebih gelap dan lebih nyaman dibaca */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow ringan */
+  display: flex;
+  flex-direction: column; /* Susun elemen secara kolom */
+  position: fixed; /* Membuat sidebar tetap di posisi */
+  transition: width 0.3s ease; /* Efek transisi lebar sidebar */
+}
+
+/* Styling untuk Header */
+.header {
+  background-color: #34495e; /* Warna latar belakang header lebih gelap (abu-abu kebiruan) */
+  padding: 20px; /* Padding untuk header */
+  text-align: center; /* Teks rata tengah */
+  border-bottom: 2px solid #7f8c8d; /* Garis pemisah bawah header dengan warna lebih gelap */
+}
+
+.header .logo {
+  width: 50px; /* Ukuran logo */
+  border-radius: 50%; /* Logo bulat */
+}
+
+/* Styling untuk Navbar */
+.navbar {
+  flex-grow: 1; /* Membuat navbar mengisi ruang yang tersisa */
+  display: flex;
+  flex-direction: column; /* Susun item navbar secara kolom */
+  padding-top: 20px;
+}
+
+/* Navbar brand styling */
+.navbar-brand {
+  font-size: 24px; /* Ukuran font yang lebih besar untuk brand */
+  font-weight: 600; /* Tebal sedikit */
+  color: white; /* Warna brand lebih gelap dan elegan */
+  text-align: center; /* Teks rata tengah */
+  margin-bottom: 20px;
+}
+
+/* Menata item navbar */
+.navbar-nav {
+  list-style: none; /* Menghilangkan bullet */
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Styling untuk setiap item */
+.nav-item {
+  margin-bottom: 15px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 18px;
+  color: white; /* Warna teks link lebih gelap */
+  padding: 12px 20px; /* Padding lebih besar */
+  text-transform: capitalize; /* Menambah kesan rapi dan seragam */
+  border-radius: 8px; /* Sudut membulat */
+  transition: all 0.3s ease; /* Efek transisi untuk hover */
+  display: block;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #bdc3c7; /* Warna latar saat hover lebih gelap dan lembut */
+  color: #2c3e50; /* Warna teks saat hover lebih gelap */
+}
+
+/* Styling untuk tombol logout di pojok bawah */
+.logout-wrapper {
+  padding: 20px; /* Ruang tambahan di footer */
+  text-align: center;
+  border-top: 1px solid #7f8c8d; /* Garis pemisah */
+}
+
+.logout {
+  background-color: transparent; /* Tanpa latar belakang */
+  color: #ecf0f1; /* Warna teks putih agar terlihat jelas */
+  font-size: 18px; /* Ukuran font */
+  font-weight: 500;
+  text-decoration: none; /* Hilangkan garis bawah */
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.logout:hover {
+  color: #bdc3c7; /* Warna saat hover */
+  transform: translateY(-3px); /* Efek naik sedikit */
+}
+
+.logout i {
+  margin-right: 8px; /* Jarak antara ikon dan teks */
+  font-size: 20px; /* Ukuran ikon */
+}
+
+/* Styling untuk mobile */
+@media (max-width: 991px) {
+  .sidebar {
+    width: 100%; /* Lebar sidebar untuk mobile */
+    position: static; /* Posisi sidebar menjadi static */
+    height: auto;
+  }
+  
+  .navbar {
+    padding-top: 10px; /* Mengurangi padding untuk mobile */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+}

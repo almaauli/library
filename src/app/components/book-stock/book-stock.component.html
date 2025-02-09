@@ -1,0 +1,20 @@
+<div class="content">
+  <h2> Daftar Stok Buku</h2>
+<div class="book-list-item" *ngFor="let book of books">
+  <img [src]="book.coverImageUrl" alt="Cover Buku" class="book-cover">
+  <div class="book-info">
+    <h3 class="book-title">{{ book.judul }}</h3>
+    <p class="book-author">Penulis: {{ book.penulis }}</p>
+    <p class="book-stock">Stok: {{ book.stok }}</p>
+
+    <!-- Tombol Show Actions -->
+    <button (click)="toggleActions(book.bookId)" class="btn-show-actions">...</button>
+
+    <!-- Dropdown Actions (Update & Delete) -->
+    <div *ngIf="isActionsVisible(book.bookId)" class="dropdown-actions">
+      <a [routerLink]="['/update-book', book.bookId]" class="btn-update-stock">Update</a>
+      <button (click)="onDeleteBook(book.bookId)" class="btn-delete-stock">Hapus Buku</button>
+    </div>
+  </div>
+</div>
+</div>

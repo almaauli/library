@@ -1,0 +1,25 @@
+<div class="peminjaman-container">
+  <h2>Peminjaman Buku</h2>
+
+  <div class="form-group">
+    <label for="bookId">ID Buku</label>
+    <input type="number" [(ngModel)]="bookId" id="bookId" class="form-control" placeholder="Masukkan ID Buku">
+  </div>
+
+  <div class="form-group">
+    <label for="jumlah">Jumlah</label>
+    <input type="number" [(ngModel)]="jumlah" id="jumlah" class="form-control" placeholder="Masukkan Jumlah Buku">
+  </div>
+
+  <div class="form-group">
+    <label for="tanggalPinjam">Tanggal Pinjam</label>
+    <input type="date" [(ngModel)]="tanggalPinjam" id="tanggalPinjam" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="tanggalKembali">Tanggal Kembali</label>
+    <input type="date" [(ngModel)]="tanggalKembali" id="tanggalKembali" class="form-control">
+  </div>
+
+  <button (click)="submitPeminjaman()" class="btn btn-primary">Tambah Peminjaman</button>
+</div>

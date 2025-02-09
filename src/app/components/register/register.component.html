@@ -1,0 +1,64 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8">
+      <div class="card shadow-lg">
+        <div class="card-body">
+          <h2 class="card-title text-center mb-4">Register</h2>
+          <form (ngSubmit)="onRegister()" #registerForm="ngForm">
+            <!-- Username -->
+            <div class="form-floating mb-3">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" id="username" [(ngModel)]="username" name="username" required #usernameField="ngModel">
+              <div *ngIf="usernameField.invalid && usernameField.touched" class="text-danger">
+                Username wajib diisi.
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-floating mb-3">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" required email #emailField="ngModel">
+              <div *ngIf="emailField.invalid && emailField.touched" class="text-danger">
+                Email tidak valid atau wajib diisi.
+              </div>
+            </div>
+
+            <!-- Password -->
+            <div class="form-floating mb-3">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password" required minlength="6" #passwordField="ngModel">
+              <div *ngIf="passwordField.invalid && passwordField.touched" class="text-danger">
+                Password minimal 6 karakter.
+              </div>
+            </div>
+
+            <!-- Nama Lengkap -->
+            <div class="form-floating mb-3">
+              <label for="namaLengkap">Nama Lengkap</label>
+              <input type="text" class="form-control" id="namaLengkap" [(ngModel)]="namaLengkap" name="namaLengkap" required #namaLengkapField="ngModel">
+              <div *ngIf="namaLengkapField.invalid && namaLengkapField.touched" class="text-danger">
+                Nama Lengkap wajib diisi.
+              </div>
+            </div>
+
+            <!-- Nomor Telepon -->
+            <div class="form-floating mb-3">
+              <label for="nomorTelepon">Nomor Telepon</label>
+              <input type="text" class="form-control" id="nomorTelepon" [(ngModel)]="nomorTelepon" name="nomorTelepon" required #nomorTeleponField="ngModel">
+              <div *ngIf="nomorTeleponField.invalid && nomorTeleponField.touched" class="text-danger">
+                Nomor Telepon wajib diisi.
+              </div>
+            </div>
+
+            <!-- Button -->
+            <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Register</button>
+            <p *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</p>
+          </form>
+          <div class="text-center mt-3">
+            <p>Do you have a account? <a routerLink="/login">Login</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

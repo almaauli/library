@@ -1,0 +1,43 @@
+<div class="container mt-5">
+  <h2>Laporan Peminjaman</h2>
+
+  <h3>Laporan Hari Ini</h3>
+  <div class="card" *ngIf="laporanHari.length > 0; else noDataHari">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let laporan of laporanHari">
+        <div class="row">
+          <div class="col-md-6">
+            <p><strong>User ID:</strong> {{ laporan.userId }}</p>
+          </div>
+          <div class="col-md-6">
+            <p><strong>Book ID:</strong> {{ laporan.bookId }}</p>
+          </div>
+        </div>
+        <p><strong>Tanggal Pinjam:</strong> {{ laporan.tanggalPinjam | date: 'fullDate' }}</p>
+      </li>
+    </ul>
+  </div>
+  <ng-template #noDataHari>
+    <p class="no-data">Tidak ada laporan untuk hari ini.</p>
+  </ng-template>
+
+  <h3>Laporan Bulan Ini</h3>
+  <div class="card" *ngIf="laporanBulan.length > 0; else noDataBulan">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let laporan of laporanBulan">
+        <div class="row">
+          <div class="col-md-6">
+            <p><strong>User ID:</strong> {{ laporan.userId }}</p>
+          </div>
+          <div class="col-md-6">
+            <p><strong>Book ID:</strong> {{ laporan.bookId }}</p>
+          </div>
+        </div>
+        <p><strong>Tanggal Pinjam:</strong> {{ laporan.tanggalPinjam | date: 'fullDate' }}</p>
+      </li>
+    </ul>
+  </div>
+  <ng-template #noDataBulan>
+    <p class="no-data">Tidak ada laporan untuk bulan ini.</p>
+  </ng-template>
+</div>

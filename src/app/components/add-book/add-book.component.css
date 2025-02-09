@@ -1,0 +1,117 @@
+/* Styling kontainer tambah buku */
+.container {
+  background-color: #f8f9fa !important; /* Warna abu-abu terang untuk latar belakang */
+  border-radius: 16px !important; /* Lebih round di sudut */
+  padding: 40px !important;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1) !important;
+  max-width: 700px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Heading */
+h2 {
+  margin-bottom: 20px !important;
+  color: #6c757d !important; /* Warna abu-abu lembut untuk heading */
+  font-weight: bold !important;
+  text-align: center !important;
+  letter-spacing: 1px !important;
+}
+
+/* Label dan input */
+label {
+  font-size: 16px !important;
+  color: #495057 !important; /* Warna abu gelap yang lembut */
+  display: block !important;
+  margin-bottom: 10px !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* Input styling */
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100% !important;
+  padding: 14px 18px !important; /* Padding lebih besar */
+  font-size: 16px !important;
+  border: 1px solid #dee2e6 !important; /* Border abu-abu terang */
+  border-radius: 8px !important; /* Lebih round */
+  margin-bottom: 20px !important;
+  box-sizing: border-box !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Fokus pada input */
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-color: #6c757d !important; /* Border berubah menjadi lebih gelap */
+  box-shadow: 0 0 10px rgba(108, 117, 125, 0.3) !important; /* Shadow lebih halus */
+  outline: none !important; /* Menghilangkan outline default */
+}
+
+/* Textarea styling */
+textarea {
+  resize: vertical !important;
+  min-height: 120px !important; /* Agar textarea lebih besar */
+  padding: 14px 18px !important; /* Padding lebih besar */
+}
+
+/* Tombol simpan */
+.btn-soft {
+  width: 100% !important;
+  padding: 14px !important;
+  font-size: 16px !important;
+  color: #ffffff !important;
+  background-color: #6c757d !important; /* Warna abu-abu lembut */
+  border: none !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  font-weight: bold !important;
+  letter-spacing: 1px !important;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.btn-soft:hover {
+  background-color: #495057 !important; /* Warna abu lebih gelap saat hover */
+  transform: translateY(-3px) !important; /* Efek hover mengangkat tombol */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important; /* Shadow halus saat hover */
+}
+
+.btn-cancel {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  color: #6c757d;
+  background-color: white; /* Warna abu-abu lembut */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn-cancel:hover {
+  background-color: #A6AEBF; /* Warna abu lebih gelap saat hover */
+  transform: translateY(-3px); /* Efek hover mengangkat tombol */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow halus saat hover */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px !important;
+    max-width: 90% !important;
+  }
+
+  input[type="text"], 
+  input[type="number"], 
+  textarea,
+  .btn-soft {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+}

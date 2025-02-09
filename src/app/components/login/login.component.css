@@ -1,0 +1,95 @@
+/* Container form login/register */
+.container {
+    max-width: 500px; /* Lebar maksimum */
+    margin: 100px auto; /* Margin atas/bawah */
+    padding: 40px; /* Padding dalam */
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Bayangan */
+    background-color: #ffffff; /* Warna latar belakang */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+
+  /* Card styling */
+  .card {
+    border-radius: 2px;
+    background-color: #ffffff; /* Warna latar belakang */
+    border: none; /* Menghapus border */
+    overflow: hidden; /* Memastikan isi tidak keluar dari card */
+    transition: all 0.3s ease-in-out; /* Transisi halus */
+  }
+  
+  /* Floating label styles */
+  .form-floating .form-control {
+    border-radius: 8px; /* Sudut membulat */
+    border: 1px solid #6c757d; /* Border */
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transisi */
+    padding: 15px; /* Padding */
+    font-size: 16px; /* Ukuran font */
+    width: 90%; /* Lebar input */
+  }
+  
+  .form-floating .form-control:focus {
+    border-color: #6c757d; /* Warna border saat fokus */
+  }
+  
+  /* Button styles */
+  .btn-primary {
+    width: 50%; /* Lebar tombol */
+    padding: 12px; /* Padding */
+    color: #ffffff;
+    background-color: #6c757d; /* Warna abu-abu lembut */
+    border-color: #6c757d; /* Warna border */
+    border-radius: 8px; /* Sudut membulat */
+    font-size: 18px; /* Ukuran font */
+    font-weight: bold; /* Ketebalan font */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transisi */
+    position: relative;
+    z-index: 2; /* Z-index agar terlihat di atas */
+    margin-top: 10px; /* Jarak atas */
+    display: block; /* Membuat tombol menjadi block agar margin bekerja */
+    margin-left: auto; /* Memusatkan tombol secara horizontal */
+    margin-right: auto; /* Memusatkan tombol secara horizontal */
+  }
+  
+  .btn-primary:hover {
+    background-color:#7f8c8d; /* Warna latar belakang saat hover */
+    transform: translateY(-3px); /* Efek angkat saat hover */
+  }
+  
+  /* Text error */
+  .text-danger {
+    margin-top: 10px; /* Jarak atas */
+    font-size: 14px; /* Ukuran font */
+  }
+  
+  /* Link */
+  p a {
+    color: #6c757d; /* Warna link */
+    font-weight: bold; /* Ketebalan font */
+    transition: color 0.3s ease; /* Transisi warna */
+  }
+  
+  p a:hover {
+    color: #7f8c8d; /* Warna saat hover */
+  }
+  
+  /* Responsif */
+  @media (max-width: 768px) {
+    .btn-primary {
+      width: 80%; /* Lebar tombol di layar kecil */
+      font-size: 16px; /* Ukuran font */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .btn-primary {
+      width: 100%; /* Lebar tombol penuh di layar sangat kecil */
+      font-size: 16px; /* Ukuran font */
+    }
+  }
+  

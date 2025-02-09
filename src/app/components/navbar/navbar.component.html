@@ -1,0 +1,37 @@
+<div class="sidebar d-flex flex-column overflow-auto" *ngIf="showNavbar">
+  <!-- Header Sidebar -->
+  <div class="header">
+    <a class="navbar-brand">📖LibraryApp</a>
+  </div>
+
+  <!-- Menu Sidebar -->
+  <nav class="navbar">
+    <ul class="navbar-nav">
+      <!-- Menu untuk User -->
+      <li class="nav-item" *ngIf="userRole === 'user'">
+        <a class="nav-link" routerLink="/book-list">Books</a>
+      </li>
+      <li class="nav-item" *ngIf="userRole === 'user'">
+        <a class="nav-link" routerLink="/peminjaman">Peminjaman</a>
+      </li>
+
+      <!-- Menu untuk Admin -->
+      <li class="nav-item" *ngIf="userRole === 'admin'">
+        <a class="nav-link" routerLink="/add-book">Add Book</a>
+      </li>
+      <li class="nav-item" *ngIf="userRole === 'admin'">
+        <a class="nav-link" routerLink="/book-stock">Stock</a>
+      </li>
+      <li class="nav-item" *ngIf="userRole === 'admin'">
+        <a class="nav-link" routerLink="/laporan">Laporan</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Logout -->
+  <div class="logout-wrapper mt-auto">
+    <a class="nav-link logout" (click)="confirmLogout()" title="Logout">
+      <i class="fas fa-sign-out-alt"></i> Logout
+    </a>    
+  </div>
+</div>
